@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.3em;
+font-family: 'Times New Roman', Times, serif;
+/* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,239,0,1) 17%, rgba(0,212,255,1) 100%); */
+background-image: url(https://cdn.pixabay.com/photo/2013/04/04/12/34/mountains-100367_1280.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+.main-header{
+    padding: 2em;
+display: flex;
+flex-direction:column ;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.main-header h1{
+    font-size: 4em;
+    margin-bottom: 1.5em;
+    line-height: 1.5em;
+    margin: 1em;
+    color: rgba(255, 255, 255, 0.904);
+}
+
+.main-header h1 span{
+    color: #ff5e00;
+}
+
+.main-header p{
+    color: aliceblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 2em;
+
+}
+
+img{
+    width: 100%;
+
+}
+
+.card{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 2em;
+margin-bottom:  2em;
+/* background: #d8b209; */
+background: linear-gradient(90deg, rgba(255,255,255,1) 10%, rgba(215,207,88,1) 38%, rgba(255,154,0,1) 67%);
+}
+
+.card h3{
+margin-bottom: 2em;
+}
+
+.card img{
+height: 400px;
+}
+
+.card:nth-child(even) img{
+order: 2;
+}
+
+a{
+    color: #0044ff;
+    text-decoration: none ;
+}
+
+.btn{
+    display: inline-block;
+    background: #000;
+    color: white;
+padding: 0.8em 1.8em;
+margin-top: 2em;
+cursor:default;
+
+}
+
+.btn:hover{
+    opacity: 0.7;
+}
+
+.card div{
+    padding: 2em;
+}
+
+.galeria{
+margin: 2em;
+display: flex;
+height: 20em;
+gap: 1em;
+
+}
+
+.galeria div{
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+/* background-position: 100%; */
+flex: 1;
+transition: all 0.9999s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.galeria div:hover{
+    flex: 5;
+    /* border-radius: 90px; */
+}
+
+.galeria:hover div:not(:hover){
+    filter: grayscale(1);
+
+}
